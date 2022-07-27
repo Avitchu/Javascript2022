@@ -1,7 +1,7 @@
 h1{
-    background-color: rgb(255, 25, 0);
+    display: inline-block;
     font-size: 50px;
     font-weight: 200;
+    background-color: rgb(255, 25, 0);
     font-family: 'Open Sans', sans-serif;
-    display: inline-block;
 }

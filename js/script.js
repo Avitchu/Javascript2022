@@ -1,22 +1,65 @@
 //datos para la cuenta
-alert("Bienvenide, calculemos cuanto podes gastar por producto para no pasarte de tu presupuesto");
 
-let gasto = parseFloat(prompt("Cuanto queres gastar?"));
-if (gasto <= 0) {
-    alert ("Ingrese cuanto dinero quiere gastar")  
-    gasto = parseFloat(prompt ("Ingrese cuanto dinero quiere gastar"));
+alert("Bienvenide, ingresa a la plataforma para acceder ver los descuentos, escribi Entrar");
+
+let savedPIN = 'Entrar';
+let ingresar = false;
+
+//Login
+
+for (let i = 2; i >= 0; i--) {
+    let userPIN = prompt('Ingresa tu pin. Tenés ' + (i + 1) + ' intentos.');
+    if (userPIN === savedPIN) {
+        alert('Login exitoso');
+        ingresar = true;
+        break;
+    } else {
+        alert('Error. Te quedan ' + i + ' intentos.');
+    }
+
 }
 
-let productos = prompt("Cuantos productos va a llevar?");
-if (productos <= 0) {
+//alert('fin del login');
 
-    alert ("Ingrese cuantos productos quiere llevar")
-    productos= prompt ("Ingrese cuantos productos quiere llevar");
+if (ingresar) {
+    //"Accedemos" a la info de la cuenta
+
+class descuentos {
+    grupoDeAliades(id, Aliade,tipoDeDescuento,montoDeDescuento){
+        this.id = id;
+        this.Aliade = Aliade;
+        this.tipoDeDescuento = tipoDeDescuento;
+        this.montoDeDescuento = montoDeDescuento;
+    }
 }
 
-//datos
-let porcentajeTotal = productos;
+const gastronomia = [{ id: 100, Aliade: 'casabrandon', tipoDeDescuento: 'gastronomia',montoDeDescuento:'10%'}, { id: 100, Aliade: 'lo de Nelly ', tipoDeDescuento: 'gastronomia',montoDeDescuento:'20%'}];
+const ropa=[{ id: 200, Aliade: 'serigrafiaUrgente', tipoDeDescuento: 'ropa', montoDeDescuento:'20%'}, { id: 200, Aliade: 'Wipp', tipoDeDescuento: 'ropa', montoDeDescuento:'10%'}];
+const accesorios= [{ id: 300, Aliade: 'latirolesa', tipoDeDescuento: 'accesorios',montoDeDescuento:'10%' }, { id: 300, Aliade: 'miramelasmedias', tipoDeDescuento: 'accesorios',montoDeDescuento:'15%' }];
+const libros= [{ id: 400, Aliade: 'Cespedes', tipoDeDescuento: 'libros',montoDeDescuento:'15%'},{ id: 400, Aliade: 'KOKORO', tipoDeDescuento: 'libros',montoDeDescuento:'10%'}];
 
-let totalXproducto = gasto/porcentajeTotal;
 
-alert ("Podes gastar" + " " +totalXproducto+ " "+"aprox. por producto");
+const descuentosClub  = [gastronomia, ropa, accesorios, libros]
+
+let elegir= parseInt (prompt("Elegi que clase de descuento estas buscando: \n 1- Gastronomia  \n 2- Ropa \n 3- Accesorios \n 4 - libros"));
+
+switch(elegir) {
+    case 1:
+        for (i of gastronomia){
+            alert(i.Aliade + " "+ i.tipoDeDescuento + " "+ i.montoDeDescuento+ " ")
+        };
+    case 2: for (i of ropa){
+        alert(i.Aliade + " "+ i.tipoDeDescuento + " "+ i.montoDeDescuento+ " ")
+    };
+    case 3: 
+    for (i of accesorios){
+        alert(i.Aliade + " "+ i.tipoDeDescuento + " "+ i.montoDeDescuento+ " ")
+    };
+    case 4: for (i of libros){
+        alert(i.Aliade + " "+ i.tipoDeDescuento + " "+ i.montoDeDescuento+ " ")
+    };
+
+    console.log (descuentosClub);
+    let elegir= parseInt (prompt ("Ver mas descuentos disponibles \n 1- Gastronomia  \n 2- Ropa \n 3- Accesorios \n 4 - libros"));}
+
+}
