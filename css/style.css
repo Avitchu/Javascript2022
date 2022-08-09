@@ -9,10 +9,19 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: #FBAB7E;
-    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
-    
-}
+    /* background-color: #FBAB7E;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%); */
+    font-family: 'Montserrat';
+    text-align: center;
+  }
+
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat';
+    font-weight: 900;
+    line-height:1.5;
+  
+  }
 
 form {
     display: flex;
@@ -78,3 +87,142 @@ form button-2 {
     cursor: pointer;
     font-size: 20px;
 }
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat';
+    font-weight: 900;
+    line-height:1.5;
+  
+  }
+  
+  i:hover{
+    color: #ff4c68;
+  }
+  
+  /* p {
+    color: #484848;
+    font-weight: 400;
+  } */
+  
+  /* Headings */
+  
+  .big-title {
+    font-size: 3.5rem;
+  }
+  
+  .medium-title {
+    font-size: 3rem;
+    padding-top: 7.5%;
+  }
+  
+  .small-title {
+    padding-top: 3%;
+  }
+  
+  .title-title {
+    text-align: left;
+  }
+  
+  /* Containers */
+  
+  .container-fluid {
+    padding:3% 15%;
+  }
+  
+  .row {
+    padding: 3% 0;
+  }
+  
+  .coloured-section {
+    background-color: #ffa952;
+    color: #fff;
+  }
+  
+  .white-section {
+    background-color: #fff;
+    color: #000;
+  }
+/* Title  */
+
+.title-image {
+    position:absolute;
+    right:25%;
+    transform:rotate(25deg);
+    width:60%;
+  }
+  
+  .download-button {
+    margin: 5% 3% 5% 0;
+  }
+  
+  /* Features */
+  
+  #features {
+    position:relative;
+  }
+  
+  .features {
+    padding: 5% 0;
+  }
+  
+  .feature-icon {
+    color: #ef5a5a;
+    padding:1rem 0;
+  }
+  
+  /* Testimonial and Press */
+  
+  
+  
+  .testimonial-img {
+    border-radius: 100%;
+    margin: 3%;
+    width: 10%;
+  }
+  
+  .carousel-switch {
+    margin: -20%;
+  }
+  
+  .carousel-content {
+    height:100%;
+  }
+  .pricing-title {
+    text-align: center;
+  }
+  
+  .pricing-button {
+    border-color: #ffa952;
+    color: #ffa952;
+  }
+  
+  button.pricing-button:hover {
+    background-color: #ffa952;
+    color: #fff;
+  }
+  
+  /* Call to Action */
+  
+  
+  /* Footer */
+  
+  .social-icons {
+    color:black;
+    padding-bottom:0;
+    padding-top:2%;
+  }
+  
+  /* Media */
+  
+  @media screen and (max-width: 1028px){
+  
+    .title-title{
+      text-align:center;
+    }
+  
+    .title-image {
+      position:static;
+      transform:rotate(0);
+    }
+  
+  }    
